@@ -4,28 +4,25 @@ services:
     image: mysql:5.7
     restart: always
     environment:
-      MYSQL_DATABASE: nodeauth
-      MYSQL_ROOT_PASSWORD: docker
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASS}
     ports:
-      - '3306:3306'
+      - 3306:3306
     expose:
-      - '3306'
+      - 3306
     volumes:
       - .:/app
   app:
     depends_on:
       - db
     build: .
-    command: node src/app.js
+    command: npm start
     ports:
-      - "3000:3000"
+      - 3000:3000
     volumes:
       - .:/app
     environment:
       DBHOST: db
-      DBPORT: 3306
-      DBUSER: root
-      DBPASS: docker
       
 # Names our volume
 volumes:
