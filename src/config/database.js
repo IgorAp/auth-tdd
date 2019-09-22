@@ -1,11 +1,10 @@
 module.exports = {
-  host:'127.0.0.1',
-  username:'docker',
-  password:'docker',
+  host:process.env.DBHOST || '127.0.0.1',
+  username:process.env.DBUSER || 'root',
+  password: process.env.DBPASS || 'docker',
   database:'nodeauth',
   dialect:'mysql',
-  operatorsAliases:false,
-  logging:false,
+  logging:true,
   define:{
     timestamps:true,
     underscored:true,
