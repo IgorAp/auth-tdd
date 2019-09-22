@@ -1,0 +1,19 @@
+{
+  "name": "auth-tdd",
+  "version": "1.0.0",
+  "description": "Simple application for learning tdd with jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "IgorAp",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^1.7.0",
+    "sequelize": "^5.19.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^5.5.1"
+  }
+}
