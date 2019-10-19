@@ -3,6 +3,8 @@ services:
   db:
     image: mysql:5.7
     restart: always
+    env_file:
+      - .env
     environment:
       MYSQL_DATABASE: ${DB_NAME}
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASS}
@@ -12,17 +14,6 @@ services:
       - 3306
     volumes:
       - .:/app
-  app:
-    depends_on:
-      - db
-    build: .
-    command: npm start
-    ports:
-      - 3000:3000
-    volumes:
-      - .:/app
-    environment:
-      DBHOST: db
       
 # Names our volume
 volumes:
