@@ -1,5 +1,19 @@
+const cluster = require('cluster');
+const numberOfCPUs = require('os').cpus().length;
+const http = require('http');
+
 const app = require('./app');
 const port = process.env.PORT || 3000;
-app.listen(port,()=>{
-    console.log(`Running in ${port}`);
-});
+
+if(cluster.isMaster){
+    console.log(numberOfCPUs);
+    for(let i = 0;i<numberOfCPUs;i++){
+        cluster.fork();
+    }
+}
+else{
+    app.listen(port, () => {
+        console.log('Application is running');
+    });
+}
+

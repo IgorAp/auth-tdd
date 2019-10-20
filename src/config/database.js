@@ -2,7 +2,6 @@ require('dotenv').config({
   path: process.env.NODE_ENV === 'test' ? '.env.test' : '.env'
 });
 
-console.log(process.env.DIALECT);
 module.exports = {
   host:process.env.DBHOST || '127.0.0.1',
   username:process.env.DB_USER || 'root',
