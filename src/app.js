@@ -3,9 +3,13 @@ require('dotenv').config({
 });
 
 const express = require("express");
+const bodyParser = require('body-parser');
+const helmet = require('helmet');
+
 const routes = require('./routes');
 const app = express();
-const bodyParser = require('body-parser');
+
+app.use(helmet());
 app.use(bodyParser.json());
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));

@@ -1,40 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1571576157121" clover="3.2.0">
-  <project timestamp="1571576157121" name="All files">
-    <metrics statements="79" coveredstatements="71" conditionals="27" coveredconditionals="20" methods="13" coveredmethods="10" elements="119" coveredelements="101" complexity="0" loc="79" ncloc="79" packages="6" files="9" classes="9"/>
+<coverage generated="1571601280697" clover="3.2.0">
+  <project timestamp="1571601280697" name="All files">
+    <metrics statements="89" coveredstatements="75" conditionals="29" coveredconditionals="20" methods="14" coveredmethods="11" elements="132" coveredelements="106" complexity="0" loc="89" ncloc="89" packages="6" files="9" classes="9"/>
     <package name="src">
-      <metrics statements="23" coveredstatements="19" conditionals="4" coveredconditionals="1" methods="2" coveredmethods="1"/>
+      <metrics statements="34" coveredstatements="24" conditionals="6" coveredconditionals="1" methods="3" coveredmethods="2"/>
       <file name="app.js" path="/home/igor/Documentos/auth-tdd/src/app.js">
-        <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="0" coveredmethods="0"/>
+        <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="1" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
       </file>
       <file name="routes.js" path="/home/igor/Documentos/auth-tdd/src/routes.js">
-        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
+        <line num="7" count="7" type="stmt"/>
+        <line num="8" count="7" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
       </file>
       <file name="server.js" path="/home/igor/Documentos/auth-tdd/src/server.js">
-        <metrics statements="4" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="10" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="3" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="7" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.app.controllers">
@@ -109,12 +120,11 @@
       </file>
     </package>
     <package name="src.config">
-      <metrics statements="3" coveredstatements="3" conditionals="10" coveredconditionals="8" methods="0" coveredmethods="0"/>
+      <metrics statements="2" coveredstatements="2" conditionals="10" coveredconditionals="8" methods="0" coveredmethods="0"/>
       <file name="database.js" path="/home/igor/Documentos/auth-tdd/src/config/database.js">
-        <metrics statements="3" coveredstatements="3" conditionals="10" coveredconditionals="8" methods="0" coveredmethods="0"/>
+        <metrics statements="2" coveredstatements="2" conditionals="10" coveredconditionals="8" methods="0" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.database.migrations">
