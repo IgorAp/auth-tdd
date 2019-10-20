@@ -1,7 +1,7 @@
 const request = require('supertest');
 
 const app = require('../../src/app');
-const { User } = require('../../src/app/models');
+const factory = require('../utils/factories');
 const truncate = require('../utils/truncate');
 
 describe('Authentication',()=>{
@@ -10,17 +10,35 @@ describe('Authentication',()=>{
     });
 
     it('should authenticate with valid credentials', async () => {
-        const user = await User.create({
-            name:'igor aparecido da silva',
-            email:'igor@gmal.com12',
-            password_hash:'123123'
+        const user = await factory.create('User');
+        const response = await request(app)
+            .post('/sessions')
+            .send({
+                email:user.email,
+                password:'123123'
+            });
+        expect(response.status).toBe(200);
+    });
+    it('shound return 401 for invalid credentials', async () => {
+        const user = await factory.create('User',{
+            password:'invalid'
         });
         const response = await request(app)
             .post('/sessions')
             .send({
                 email:user.email,
-                password_hash:user.password_hash
+                password:'321321'
             });
-        expect(response.status).toBe(200);
-    },30000);
+        expect(response.status).toBe(401);
+    });
+    it('shound return jwt token when authenticated', async () => {
+        const user = await factory.create('User');
+        const response = await request(app)
+            .post('/sessions')
+            .send({
+                email:user.email,
+                password:'123123'
+            });
+        expect(response.body).toHaveProperty('token');
+    });
 });
