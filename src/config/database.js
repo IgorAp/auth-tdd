@@ -9,7 +9,8 @@ module.exports = {
   password:process.env.DB_PASS || 'docker',
   database:process.env.DB_NAME,
   dialect:process.env.DIALECT || 'mysql',
-  storage: process.cwd()+'/__test__/database.db',
+  storage: '__tests__/database.sqlite',
+  logging: false,
   define:{
     timestamps:true,
     underscored:true,
